@@ -1,0 +1,709 @@
+@media (max-width:500px){
+    
+    /*.top-wrapper h1{
+        font-size: 30px;
+        text-align:left;
+        
+    }*/
+
+    .hamburger{
+        display: block;
+    }
+
+    /*.menu-list{
+        position: absolute;
+        top:70px;
+        right:25px;
+    }*/
+
+    .header-parts{
+        display: none;
+    }
+
+    /* 以下CSSを編集*/
+    
+    
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  /*margin: 0;
+  padding: 0;*/
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.PC-br{
+  display: none;
+}
+
+.SP-br{
+  display: block;
+}
+
+
+header{
+  position: relative;
+  width:100%;
+  top:0;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  color:black;
+  height: 70px;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  
+}
+
+/*スクロール時のheader*/
+.scroll{
+  border-bottom: solid rgb(177, 160, 160);
+  border-width:0.5px;
+  height:60px;
+  font-size: 10px;
+  box-shadow:rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+-webkit-box-shadow:rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+-moz-box-shadow:rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+}
+
+.scroll .logo{
+  font-size: 20px;
+}
+
+
+
+
+
+.header-outline{
+  display: flex;
+  width:100%;
+}
+
+.header-parts{
+  
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.header-parts ul{
+  margin-right: 25px;
+  list-style: none;
+  font-size: 12px;
+  
+}
+
+
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :#fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #fff;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  opacity: 100;
+  
+}
+
+
+.logo{
+  font-size: 30px;
+  color:black;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  margin-right: 100px;
+  border-bottom: 1px dotted rgb(3, 3, 3);
+  margin-bottom: 10px;
+}
+
+.top-wrapper{
+  margin-top: 80px;
+  width:100%;
+  height:300px;
+  /*background-image: url("leonardo-wong-7pGehyH7o64-unsplash (1).jpg");*/
+  background-size:contain;   
+  top:0;
+  background-size: cover;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.swiper-container{
+
+  width:100%;
+}
+
+.swiper-slide{
+  color:white;
+  height:300px;
+  background-size:contain;   
+  top:0;
+  background-size: cover;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+:root {
+  --swiper-navigation-size: 15px;
+}
+
+.back-ground1{
+  height:300px;
+  background-image: url("leonardo-wong-7pGehyH7o64-unsplash (3).jpg");
+  background-size:contain;   
+  top:0;
+  background-size: cover;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.back-ground2{
+  background-image: url("annie-spratt-OWq8w3BYMFY-unsplash.jpg");
+  height:300px;
+  background-size:contain;   
+  top:0;
+  background-size: cover;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.back-ground3{
+  background-image: url("andrew-small-EfhCUc_fjrU-unsplash (3).jpg");
+  height:300px;
+  background-size:contain;   
+  top:0;
+  background-size: cover;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.swiper-slide h1{
+  padding-left: 50px;
+}
+
+.swiper-slide h2{
+  padding-left: 50px;
+  font-size: 20px;
+}
+
+
+.concept{
+  margin-top: 50px;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 100%;
+}
+
+.concept h2{
+  margin-bottom: 20px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.concept p{
+  font-size: 11px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.last{
+  margin-bottom: 80px;
+}
+
+.concept img{
+  width:80%;
+  height: auto;
+  margin: 40px auto;
+  
+}
+
+.backcolor{
+  width: 100%;
+  height: 70px;
+  background-color: #ededed;
+  margin-top: -100px;
+  margin-bottom: 80px;
+}
+
+.work{
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.work h2{
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.work p{
+  font-size: 11px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.work-outline{
+  width:80%;
+  margin: 0 auto;
+}
+
+
+.work-item{
+  display: block;
+  margin: 0 auto;
+  width:100%;
+  margin-bottom: 80px;
+  
+}
+
+.work-item h2{
+  font-size: 15px;
+  margin: 15px;
+}
+
+nav{
+  margin: 0 auto;
+  /*margin-right:50px;
+  margin-left:50px;*/
+}
+
+nav h2{
+  font-size: 23px;
+  letter-spacing: 3px;
+  
+}
+nav p{
+  letter-spacing: 3px;
+  font-size: 11px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+nav img{
+  margin-top: 30px;
+  width:100%;
+  
+}
+
+.page-top
+{
+	margin: 0 ;
+	padding: 0 ;
+  display: none;
+  text-align: center;
+}
+
+.page-top:hover{
+   cursor: pointer;
+}
+ 
+.page-top p
+{
+	margin: 0 ;
+	padding: 0 ;
+  font-size: 10px;
+	position: fixed ;
+	right: 16px ;
+	bottom: 16px ;
+}
+ 
+.move-page-top
+{
+	display: block ;
+	background: #463f3f;
+	width: 50px ;
+	height: 50px ;
+
+	color: #fff ;
+	line-height: 50px ;
+	text-decoration: none ;
+	text-align: center ;
+
+	-webkit-transition:all 0.3s ;
+	-moz-transition:all 0.3s ;
+	transition:all 0.3s ;
+}
+
+.move-page-top:hover
+{
+	opacity: 0.85 ;
+}
+
+.Florist{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 80px;
+  letter-spacing: 3px;
+}
+
+
+.Florist h2{
+  text-align: center;
+  font-size: 23px;
+  
+}
+
+.Florist p{
+  letter-spacing: 3px;
+  font-size: 11px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0 15px;
+}
+
+.Florist-item-outline{
+  display: block;
+  display: block;
+  width:100%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.Florist-item{
+}
+
+.Florist-item h3{
+  margin-bottom: 20px;
+  font-size: 15px;
+
+  
+}
+
+.Florist-item img{
+  margin-bottom: 20px;
+  width:100%;
+  height:auto;
+  
+}
+
+.Florist-item div{
+  margin-bottom: 15px;
+}
+
+.Florist-item-sentence{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /*width:90%;*/
+}
+
+.Florist-item p{
+  text-align: left;
+  
+}
+
+.backcolor2{
+  width: 100%;
+  height: 1030px;
+  background-color: #ededed;
+  margin-top: -1020px;
+  margin-bottom: 30px;
+}
+
+.shop-outline{
+  width:100%;
+}
+
+.shopInfo{
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.shopInfo h2{
+  font-size: 23px;
+  
+  margin-bottom: 20px;
+}
+
+.shopInfo p{
+  letter-spacing: 3px;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+
+.shopInfo-contents{
+  display: block;
+  margin-left: 50px;
+  margin-top: 60px;
+  width:100%;
+  margin: 60px auto;
+}
+
+.shopinformationimg-outline{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#shopinformationimg{
+  height:auto;
+  width:100%;
+ 
+  
+}
+
+.shopInformation__table {
+  width: 100%;
+  border-spacing: 16px;
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 2;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+
+}
+
+.shopInformation__table td{
+   border-left:0.5px dotted black; 
+   padding-left: 20px;
+   letter-spacing: 3px;
+  font-size: 12px;
+
+   
+}
+
+.shopInformation__table th{
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.contact{
+  width: 100%;
+  padding-top: 30px;
+  background-image: url("contactimg.jpg");
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  background-size:contain;   
+  top:0;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact h2{
+  color: black;
+  font-size: 23px;
+  letter-spacing: 3px;
+}
+
+.contact p{
+  color: black;
+  letter-spacing: 3px;
+  font-size: 11px;
+  margin:10px;
+  padding: 0 15px;
+  
+}
+
+.contact-form h1{
+	color:black;
+	text-align:center;
+	font-size:12px;
+	padding:70px 0;
+	font-weight:bold;
+}
+
+.contact-form{
+  width:100%;
+	margin:0 auto;
+	display:block;
+  text-align: left;
+	border-radius:15px;
+	padding:30px 30px;
+}
+
+.contact-form div{
+	margin-bottom:30px;
+}
+
+.contact-form p{
+	font-size:11px;
+	color:black;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+
+label{
+  font-size: 12px;
+  margin-right: 15px;
+}
+.contact-form p.alert{
+	font-size:11px;
+	font-weight:normal;
+	margin:10px 0;
+	color:#DC2900;
+}
+
+.contact-form input[type="text"], textarea{
+	padding:5px;
+	font-size:12px;
+	color:#333;
+	border:1px solid #CCC;
+	background:#EFEFEF;
+}
+
+.contact-form input[type="text"]{
+	width:80%;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+}
+
+input:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#submitBtn{
+	color:#fff;
+  letter-spacing: 3px;
+	background:#4b4747;
+	border:0;
+	border-radius:30px;
+	display:block;
+	margin:0 auto;
+	font-size:12px;
+	padding:10px 25px;
+	font-weight:bold;
+}
+
+#submitBtn:focus{
+	outline:none;
+}
+
+footer {
+  text-align: center;
+  font-size: 10px;
+}
+
+
+}
+
